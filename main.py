@@ -59,7 +59,7 @@ init(project="skysuitesbookingapp-7f085", location="us-east1")
 MODEL_NAME = "gemini-2.5-flash-lite"  # or your preferred model
 model = GenerativeModel(MODEL_NAME)
 
-def load_policy_text(airline: str, policy_dir: str = r"C:\Users\PMLS\Music\ocr_project\policy_docs") -> str:
+def load_policy_text(airline: str, policy_dir: str = r"policy_docs") -> str:
     path = os.path.join(policy_dir, f"{airline.lower().strip()}.yaml")
     if not os.path.exists(path):
         return ""
@@ -101,7 +101,7 @@ You are a document data extraction AI designed for airline passenger autofill. E
 Follow airline policy rules if provided.
 
 Rules:
-- Extract `full_name`, and split into:
+- Extract `full_name` by combining surname/last_name too if present separately, and split into:
     - `first_name`: Must exactly match the Given Name Field if present
     - `middle_name` if Middle Name present
     - `last_name` from Surname or use father's name if Surname missing
@@ -137,7 +137,7 @@ Return clean JSON (leave unknown fields as empty strings):
 You are a document data extraction AI designed for airline booking autofill. Extract only English values from a passport OCR.
 
 Rules:
-- Extract `full_name` and split into:
+- Extract `full_name` by combining surname/last_name too if present separately and split into:
     - `first_name`: Must match the full Given Name exactly as it appears (even if it has multiple words)
     - `middle_name` if Middle Name present
     - `last_name` from Surname or use father's name if Surname missing
