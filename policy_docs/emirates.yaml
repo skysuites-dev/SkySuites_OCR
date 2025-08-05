@@ -1,0 +1,7 @@
+# emirates.yaml
+first_name: Must match the given name exactly as in the passport's data page.
+middle_name: Optional. Emirates does not require or display middle name.
+last_name: Should be the father's name if there is no last name, if surname present use surname.
+dob: No specific DOB rule mentioned. Ensure correct date format (YYYY-MM-DD).
+salutation: Should be "Mr", "Mrs", etc., as per document or booking.
+father_name: Must match the given name exactly as in the data page.

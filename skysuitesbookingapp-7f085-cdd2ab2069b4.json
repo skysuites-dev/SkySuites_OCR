@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "skysuitesbookingapp-7f085",
+  "private_key_id": "AIzaSyBtxu8r_u6AU5i4r8lRyWEsMHFb9Z-3qGs",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCLE/Qg/AKPIxm1\n5oQb64wEByylIm1+iqbuplC/BijnYYS+tcuIFbTbQvpZuCVFM8pM8ZAJDsrD+G37\nBmzNLD+Jk/TRzSAyYVzHrEQn3Jipar6tE2AJsC4vYZkhnNAYlcfuE0bOZIYoy1m4\n+mGFFfumKQF8am6Ue41//uiEG+u0XvLoE5CZiA8WtFLqZ2ZjBGx8CcdXNwF8M8pc\n0aekSagWklgSEQK4SSOd+cOE8mCHZSIvvEvcfyRMjBnRLNofwHBhS4qrPxfg8CQT\nDz0tEys6SD/0DuLKOrAY+wRAnWH7j6Mx32Tyg7vExZNt2qwoE7v+I5XjXxnttABu\nqAzvz4tJAgMBAAECggEAPGTGz4f/6H5ajNX0Klen7pva9D62A4xcHygTyk/3dTqw\ntUwmfQrIBarZIhrH/HwX7j+7x2MoA9+eirJojtQXJzwbxPtpbtc+vep9kj3GAVO8\nR1YxjyN1etfL8n+xEewA7M5sIfYfGBnt9Vis/mjkZWxLG+bv7ASXFqzv9WZWfXVV\n7zFtAn5jiRngalUa2DlcwYuU3BEVDoDAs6zjICKFtbbjtpoMGxEeO9eKX1Q7AO50\n/PrqCKxvYQUKHSwGKKxSIUO4ILAoAF6JCEEKCT9O9Vq08WM0u6Z3AnKkaDS7ZgkM\noPh2laDzoc37gPK41CUXDTn4+QoAJyLLc9uJzNsfLQKBgQC9alNTqz0oOw0rnvni\n165oiNIUPqMAjbykpceeYyiTD5TSsqLbfQknk/RDxqIhYI2GtEQCjhe8QDXJmkgi\nVtgbitVEyRTTtaITJ08fDDS/yEYxWYW8DFcVIWnBhFkxz+PyQvdKB1arJD1MnS7a\n100VMG9JrCd5yPsor3OtjDGsgwKBgQC797dd4bajr1scWrcc0qicgPtkDDEm8NeH\n+hOb6kgmigny4ybr3F1Oi5fcdcvQPvtR3nldnNJTQ8WjoHieBAVezKPwZ9DvkA68\nIdbRyCmAn6BvsvmTIOrppD8GrK0T+ynYehCLIFxqFFn+FoS1KUA9lyyJkryYAqgt\nkOxgZJ/3QwKBgE/s+7hEe4vsTwRnEr57kCagBTVxsMpdBIrdQTw+TzKu0neN1VaU\njjZbIikvOd6npVB/5GrHlpBi789gAKwsxQfqL0/VIaqr6/X1ElfhiKicU7IjOmE9\nO8m4za1QsWppdKAXTc25BwM0SYF4mfrR+r7EL1GBCS9EdWaXklJa4+MNAoGAHRF+\n+vbH/uJEbcsdnEh7qNBNkDhOdZ4zRqUG2UrO457fUP+N6lXG3Dm8P2y8GzVSOmP0\nUuTIpfXKH7bWUGGAzxtIkwoLBrE5hiCZjxGsUWbeMcf0zqr9iSpMUOTtUzS5UO/3\nlPxpLkJ9dEzZMwbxF1VEnvXhUoS+q2VJGNMW5e8CgYBRTbqQN2jL7EFJXRivUwbi\nbEehP8ZdvaUvxxkA+p1WUZmZlX13vVoMQUEyXamCte/1HLkPEtPakiMKWaYoh/t5\nygX2ApKIjzEn60MlVmzC+bvzJlvpLKC7c7buZ9UfZMgy7uaSkEQKer0i8p4az8tY\noZgS7bVOO3mxgyVFBIEbyA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "visionapi@skysuitesbookingapp-7f085.iam.gserviceaccount.com",
+  "client_id": "114168646014507797519",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/visionapi%40skysuitesbookingapp-7f085.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
