@@ -169,7 +169,6 @@ Return clean JSON (leave unknown fields as empty strings):
   "passport_expiry": "",
   "dob": "",
   "salutation": "",
-  "expiry_date": ""
 }}
 """
     else:
@@ -228,13 +227,9 @@ async def scan_document(
 
     # Step 1: OCR
     ocr_text = extract_text(tmp_path)
-    print("🔍 OCR TEXT:")
-    print(ocr_text)
 
     # Step 2: Gemini with airline policy
     extracted_data = extract_fields_from_text(ocr_text, doc_type, airline)
-    print("🧠 Gemini Output:")
-    print(extracted_data)
 
     if "error" in extracted_data:
         return JSONResponse(
