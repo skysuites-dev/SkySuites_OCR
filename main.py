@@ -59,7 +59,7 @@ init(project="skysuitesbookingapp-7f085", location="us-east1")
 MODEL_NAME = "gemini-2.5-flash-lite"  # or your preferred model
 model = GenerativeModel(MODEL_NAME)
 
-def load_policy_text(airline: str, policy_dir: str = r"C:\Users\PMLS\Music\ocr_project\policy_docs") -> str:
+def load_policy_text(airline: str, policy_dir: str = r"policy_docs") -> str:
     path = os.path.join(policy_dir, f"{airline.lower().strip()}.yaml")
     if not os.path.exists(path):
         return ""
