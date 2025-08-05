@@ -149,7 +149,7 @@ Rules:
 - Otherwise use `father_name`
 - Passport number: Alphanumeric (usually 8–10 characters)
 - Passport expiry: YYYY-MM-DD
-- Passport country: Extract as full country or ISO 3-letter code
+- Passport country: Extract as full country or ISO 3-letter code and convert it into alpha 2-code
 - DOB in YYYY-MM-DD format
 - Extract nationality if mentioned (not just issuing country)
 - Check and Include Passport expiry
