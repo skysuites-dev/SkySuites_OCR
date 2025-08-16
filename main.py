@@ -34,7 +34,7 @@ def extract_text(image_path: str) -> str:
 
 def is_expired(date_str: str) -> bool:
     try:
-        expiry_date = datetime.strptime(date_str, "%Y-%m-%d")
+        expiry_date = datetime.strptime(date_str, "%d-%m-%Y")
         return expiry_date < datetime.today()
     except Exception as e:
         print(f"❗ Failed to parse expiry date '{date_str}':", e)
@@ -112,7 +112,7 @@ Rules:
 - Use `husband_name` only if 'wife of' is present
 - Otherwise use `father_name`
 - CNIC number format: As given in OCR Text
-- DOB in YYYY-MM-DD format
+- DOB in DD-MM-YYYY format
 - Extract nationality if present in English
 - Check and Include CNIC expiry
 
@@ -148,9 +148,9 @@ Rules:
 - Use `husband_name` only if 'wife of' is present
 - Otherwise use `father_name`
 - Passport number: Alphanumeric (usually 8–10 characters)
-- Passport expiry: YYYY-MM-DD
+- Passport expiry: DD-MM-YYYY
 - Passport country: Extract as full country or ISO 3-letter code and convert it into alpha 2-code
-- DOB in YYYY-MM-DD format
+- DOB in DD-MM-YYYY format
 - Extract nationality if mentioned (not just issuing country)
 - Check and Include Passport expiry
 
@@ -178,7 +178,7 @@ Return clean JSON (leave unknown fields as empty strings):
 # Utility: Age calculation
 def calculate_age(dob_str: str) -> int:
     try:
-        dob = datetime.strptime(dob_str, "%Y-%m-%d")
+        dob = datetime.strptime(dob_str, "%d-%m-%Y")
         today = datetime.today()
         return today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
     except Exception:
