@@ -212,6 +212,21 @@ def validate_passenger_type(dob: str, passenger_type: str):
         )
     return None  # Valid case
 
+def detect_document_type(ocr_text: str) -> str:
+    """Detect if the document is CNIC or Passport from OCR text."""
+    text = ocr_text.lower()
+
+    # Keywords for CNIC
+    cnic_keywords = ["cnic", "national identity card", "nadra", "identity card"]
+    # Keywords for Passport
+    passport_keywords = ["passport", "republic of", "authority", "place of issue"]
+
+    if any(word in text for word in cnic_keywords):
+        return "cnic"
+    elif any(word in text for word in passport_keywords):
+        return "passport"
+    return "unknown"
+
 @app.post("/scan")
 async def scan_document(
     file: UploadFile = File(...),
@@ -230,6 +245,14 @@ async def scan_document(
 
     # Step 2: Gemini with airline policy
     extracted_data = extract_fields_from_text(ocr_text, doc_type, airline)
+
+    # ✅ Step 1.5: Validate doc_type vs detected type
+    detected_type = detect_document_type(ocr_text)
+    if detected_type != "unknown" and detected_type != doc_type.lower():
+        return JSONResponse(
+            status_code=400,
+            content={"status": 400, "message": f"Invalid document uploaded. Expected {doc_type.upper()} but detected {detected_type.upper()}!"}
+        )
 
     if "error" in extracted_data:
         return JSONResponse(
