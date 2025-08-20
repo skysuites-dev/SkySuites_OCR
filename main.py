@@ -227,6 +227,32 @@ def detect_document_type(ocr_text: str) -> str:
         return "passport"
     return "unknown"
 
+
+# ✅ Name Normalizer
+def normalize_name(structured: dict) -> dict:
+    full_name = structured.get("full_name", "").strip()
+    if not full_name:
+        return structured
+
+    parts = full_name.split()
+    first_name, middle_name, last_name = "", "", ""
+
+    if len(parts) == 1:
+        first_name = parts[0]
+    elif len(parts) == 2:
+        first_name, last_name = parts
+    elif len(parts) == 3:
+        first_name, middle_name, last_name = parts
+    else:
+        first_name = parts[0]
+        last_name = parts[-1]
+        middle_name = " ".join(parts[1:-1])
+
+    structured["first_name"] = first_name
+    structured["middle_name"] = middle_name
+    structured["last_name"] = last_name
+    return structured
+
 @app.post("/scan")
 async def scan_document(
     file: UploadFile = File(...),
@@ -286,6 +312,11 @@ async def scan_document(
             status_code=400,
             content={"status": 400, "message": f"{doc_type.upper()} is expired!"}
         )
+    
+    
+    # ✅ Step 4: Normalize names
+    structured = normalize_name(structured)
+
 
     # Step 4: Return to frontend
     return {
